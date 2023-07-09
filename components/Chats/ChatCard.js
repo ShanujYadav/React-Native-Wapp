@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity, Modal, TextInput, Alert } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { Alert } from 'react-native'
 
-const ChatCard = ({ item }) => {
-  //const [modalVisible, setModalVisible] = useState(false);
+const ChatCard = ({item,navigation}) => {
   return (
     <View>
       <View
@@ -11,15 +12,15 @@ const ChatCard = ({ item }) => {
           height: 65,
         }}>
         <View style={{ flex: 0.3 }} >
-          <TouchableOpacity style={{ height: 65, width: '100%', justifyContent: 'center', alignItems: 'center' }} >
+          <View style={{ height: 65, width: '100%', justifyContent: 'center', alignItems: 'center' }} >
             <Image
               style={{ height: 50, width: 50, borderRadius: 50 }}
               source={item.image}
             />
-          </TouchableOpacity>
+          </View>
         </View>
         <View style={{ flex: 1, paddingVertical: 10, marginHorizontal: 7 }}>
-          <TouchableOpacity style={{}} >
+          <TouchableOpacity  onPress={()=>navigation.navigate('Message')} >
             <View style={{ flexDirection: 'row' }} >
               <View style={{ flex: 1 }}>
                 <Text style={{ fontSize: 17 }}>
@@ -50,22 +51,6 @@ const ChatCard = ({ item }) => {
           </TouchableOpacity >
         </View>
       </View>
-
-      {/* <Modal
-        animationType="slide"
-        transparent={false}
-        visible={modalVisible}
-
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}>
-        <View style={{}}>
-          <Text>
-            jai ho
-          </Text>
-        </View>
-      </Modal> */}
-
     </View>
 
   )

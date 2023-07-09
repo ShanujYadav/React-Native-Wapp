@@ -42,7 +42,7 @@ const ChatApi=[
     {
         id: "6",
         image:require('../../assets/img/Sonam.png'),
-        title:"Anshika",
+        title:"Neha",
         lastMsg:"good morning",
         time:'8:18 am',
         noOfMsg:'2',

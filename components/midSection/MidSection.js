@@ -4,32 +4,27 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import Chat from '../Chats/Chat'
 import Status from '../Status/Status'
 import Call from '../Calls/Call'
-import { View,Text} from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
 const Tab = createMaterialTopTabNavigator();
-
 const MidSection = () => {
-  return (
-      <Tab.Navigator initialRouteName='Status' 
-      screenOptions={{
-      tabBarActiveTintColor:'white',
-      tabBarIndicatorStyle:{
-        backgroundColor:'white',
-      },
-      tabBarLabelStyle:{
-        fontWeight:'bold',
-      },
-      tabBarStyle:{
-        backgroundColor:'#0e806a'
-      }
+  return   (
+      <Tab.Navigator initialRouteName='Chat'  screenOptions={{
+        tabBarActiveTintColor:'#fff',
+        tabBarIndicatorStyle:{
+          backgroundColor: '#fff'
+        },
+        tabBarLabelStyle:{
+          fontWeight:'bold'
+        },
+        tabBarStyle:{
+          backgroundColor:'#0e806a'
+        }
       }}>
-        <Tab.Screen name='Chats' component={Chat} />
+        <Tab.Screen name='Chat' component={Chat} />
         <Tab.Screen name='Status' component={Status} />
         <Tab.Screen name='Calls' component={Call} />
       </Tab.Navigator>
-        )
-}
+  )
+      }
 
 export default MidSection;
 

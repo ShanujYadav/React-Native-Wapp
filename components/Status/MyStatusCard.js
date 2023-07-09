@@ -24,14 +24,13 @@ const MyStatusCard = () => {
                             name='pluscircle'
                             color="#2eb82e"
                             size={22} />
-                    
                         </View>
                         </View>
                 </View>
                 <View style={{ flex: 1, paddingVertical: 10, marginHorizontal: 10 }}>
                     <View style={{ flexDirection: 'row', }} >
                         <View style={{ flex: 1 }}>
-                            <Text style={{ fontSize: 17 }}>
+                            <Text style={{ fontSize: 17,fontWeight:500 }}>
                                 My Status
                             </Text></View>
                     </View>
